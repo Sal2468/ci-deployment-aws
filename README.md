@@ -204,6 +204,6 @@ http://calculator.s3.amazonaws.com/index.html
 
 Estimation:
 
- % Utilized/MonthHours/DayHours/WeekHours/Month 
-Jenkins Stack  Linux on m4.2xlarge On-Demand $ 350.63 
-Target Stack Linux on m4.2xlarge On-Demand $ 350.63 
+Stack | SO | Price 
+Jenkins  Stack | Linux on m4.2xlarge On-Demand | $ 350.63 
+Target Stack | Linux on m4.2xlarge On-Demand | $ 350.63 

@@ -2,13 +2,25 @@
 
 ## Problem
 
-Normal process:
+There is not currently automated a process for automatic deployment in production and development.
+
+Ideal process:
 
 - Developer takes a task in SCRUM (Jira or other PMS)
 - Submit code to control version Github / Code Commit
 - CI Server fetch code 
 - Automatic deployment in development
 - Automatic deployment in target production
+
+## Solution
+
+A single delivery pipeline that gives our customer (developers, testers, etc.) unencumbered access to resources and a single click automated deployment to production. To enable this, the pipeline needed to include:
+
+* The ability for any authorized team member to create a new target environment using a single click
+* Automated deployment to the target environment
+* End-to-end testing
+* The ability to terminate unnecessary environments
+* Automated deployment into production with a single click
 
 ## Pieces
 
@@ -25,16 +37,6 @@ The Target Stack
 * Creates the target.example.com Route53 Hosted Zone
 * Creates an EC2 instance with environment (Rails, Java or other + databases).
 * Runs the Custom Application.
-
-## Solution
-
-A single delivery pipeline that gives our customer (developers, testers, etc.) unencumbered access to resources and a single click automated deployment to production. To enable this, the pipeline needed to include:
-
-* The ability for any authorized team member to create a new target environment using a single click
-* Automated deployment to the target environment
-* End-to-end testing
-* The ability to terminate unnecessary environments
-* Automated deployment into production with a single click
 
 ## Technologies
 

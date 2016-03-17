@@ -85,11 +85,11 @@ Github or Code Commit is the version control repository where every piece of the
 
 The CD pipeline consists of Jenkins jobs. These jobs are configured to run one after the other. If any one of the jobs fail, the pipeline fails and that release candidate cannot be released to production. The five Jenkins jobs are listed below.
 
-1- A job that set the variables used in the pipeline (SetupVariables)
-2- Main build job (Build)
-3- Production database update job (StoreLatestProductionData)
-4- Target environment creation job (CreateTargetEnvironment)
-5- A deployment job (DeployApplication) which enables a one-click deployment into production.
+1. A job that set the variables used in the pipeline (SetupVariables)
+2. Main build job (Build)
+3. Production database update job (StoreLatestProductionData)
+4. Target environment creation job (CreateTargetEnvironment)
+5. A deployment job (DeployApplication) which enables a one-click deployment into production.
 
 We use Jenkins plugins to add more features to our Jenkins install (assumming is a Java app for example, you should customize):
 
@@ -105,13 +105,13 @@ We use Jenkins plugins to add more features to our Jenkins install (assumming is
 
 Parameter: STACK_NAME
 Type: String
-Where: Used in both CreateTargetEnvironment and DeployManateeApplication jobs
+Where: Used in both CreateTargetEnvironment and DeployApplication jobs
 Purpose: Defines the CloudFormation Stack name and SimpleDB property domain associated with the CloudFormation stack.
 
 Parameter: HOST
 Type: String
-Where: Used in both CreateTargetEnvironment and DeployManateeApplication jobs
-Purpose: Defines the CNAME of the domain created in the CreateTargetEnvironment job. The DeployManateeApplication job uses it when it dynamically creates configuration files. For instance, in test.oneclickdeployment.com, test would be the HOST
+Where: Used in both CreateTargetEnvironment and DeployApplication jobs
+Purpose: Defines the CNAME of the domain created in the CreateTargetEnvironment job. The DeployApplication job uses it when it dynamically creates configuration files. For instance, in test.oneclickdeployment.com, test would be the HOST
 
 Parameter: PRODUCTION_IP
 Type: String

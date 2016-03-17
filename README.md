@@ -42,43 +42,43 @@ The Target Stack
 
 ### AWS
 
-*AWS EC2*: Cloud-based virtual hardware instances
+**AWS EC2**: Cloud-based virtual hardware instances
 We use EC2 for all of our virtual hardware needs. All instances, from development to production are run on EC2
 
-*AWS S3:* Cloud-based storage
+**AWS S3:** Cloud-based storage
 We use S3 as both a binary repository and a place to store successful build artifacts.
 
-*AWS IAM*: User-based access to AWS resources
+**AWS IAM**: User-based access to AWS resources
 We create users dynamically and use their AWS access and secret access keys so we don’t have to store credentials as properties
 
-*AWS CloudWatch:* System monitoring
+**AWS CloudWatch:** System monitoring
 Monitors all instances in production. If an instance takes an abnormal amount of strain or shuts down unexpectedly, SNS sends an email to designated parties
 
-*AWS SNS:* Email notifications
+**AWS SNS:** Email notifications
 When an environment is created or a deployment is run, SNS is used to send notifications to affected parties.
 
-*Cucumber*: Acceptance testing
+**Cucumber**: Acceptance testing
 Cucumber is used for testing at almost every step of the way. We use Cucumber to test infrastructure, deployments and application code to ensure correct functionality. Cucumber’s unique english-ess  verbiage allows both technical personnel and customers to communicate using an executable test.
 
-*Liquibase:* Automated database change management
+**Liquibase:** Automated database change management
 Liquibase is used for all database changesets. When a change is necessary within the database, it is made to a liquibase changelog.xml
 
-*AWS CloudFormation:* Templating language for orchestrating AWS resources
+***AWS CloudFormation:** Templating language for orchestrating AWS resources
 CloudFormation is used for creating a Jenkins environment and Target environment. For instance for the Jenkins environment it creates the EC2 instance with CloudWatch monitoring alarms, associated IAM user, SNS notification topic, everything required for Jenkins to build. This along with Jenkins are the major pieces of the infrastructure.
 
-*AWS SimpleDB:* Cloud-based NoSQL database
+**AWS SimpleDB:** Cloud-based NoSQL database
 SimpleDB is used for storing dynamic property configuration and passing properties through the CD Pipeline. As part of the environment creation process, we store multiple values such as IP addresses that we need when deploying the application to the created environment.
 
-*Jenkins:* We will use Jenkins to implement a Continous Delivery pipeline using the Build Pipeline plugin.
+**Jenkins:** We will use Jenkins to implement a Continous Delivery pipeline using the Build Pipeline plugin.
 Jenkins runs the CD pipeline which does the building, testing, environment creation and deploying. Since the CD pipeline is also code (i.e. configuration code), we version our Jenkins configuration.
 
-*Capistrano:* Deployment automation
+**Capistrano:** Deployment automation
 Capistrano orchestrates and automates deployments. Capistrano is a Ruby-based deployment DSL that can be used to deploy to multiple platforms including Java, Ruby and PHP. It is called as part of the CD pipeline and deploys to the target environment.
 
-*Ansible:* Infrastructure automation
+**Ansible:** Infrastructure automation
 Ansible takes care of the environment provisioning. CloudFormation requests the environment and then calls Ansible to do the dynamic configuration. We configured Ansible to install, configure, and manage the packages, files and services.
 
-*Github or Code Commit:* Version control system
+**Github or Code Commit:** Version control system
 Github or Code Commit is the version control repository where every piece of the infrastructure is stored. This includes the environment scripts such as the Ansible modules, the CloudFormation templates, Capistrano deployment scripts, etc.
 
 ## Pipeline

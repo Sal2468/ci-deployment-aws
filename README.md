@@ -76,7 +76,7 @@ Capistrano: Deployment automation
 Capistrano orchestrates and automates deployments. Capistrano is a Ruby-based deployment DSL that can be used to deploy to multiple platforms including Java, Ruby and PHP. It is called as part of the CD pipeline and deploys to the target environment.
 
 Ansible: Infrastructure automation
-Ansible takes care of the environment provisioning. CloudFormation requests the environment and then calls Puppet to do the dynamic configuration. We configured Puppet to install, configure, and manage the packages, files and services.
+Ansible takes care of the environment provisioning. CloudFormation requests the environment and then calls Ansible to do the dynamic configuration. We configured Ansible to install, configure, and manage the packages, files and services.
 
 Github or Code Commit: Version control system
 Github or Code Commit is the version control repository where every piece of the infrastructure is stored. This includes the environment scripts such as the Ansible modules, the CloudFormation templates, Capistrano deployment scripts, etc.
@@ -177,7 +177,7 @@ We use Ansible for provisioning our target environments. We create a new target 
 3. Ansible runs the playbooks defined in hosts/default.pp.
 4. Cucumber acceptance tests are run to verify the infrastructure was provisioned correctly.
 
-This includes java version, services running (nginx, apache, mysql, etc), libraries, depedencies, compilers, etc.
+This includes components as java version, services running (nginx, apache, mysql, etc), libraries, depedencies, compilers, etc.
 
 ## Team
 

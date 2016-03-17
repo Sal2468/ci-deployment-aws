@@ -1,4 +1,4 @@
-# Continuos Integration and Delivery over AWS
+# Continuous Integration and Delivery over AWS
 
 ## Problem
 

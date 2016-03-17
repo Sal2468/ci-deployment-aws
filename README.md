@@ -94,11 +94,12 @@ The CD pipeline consists of Jenkins jobs. These jobs are configured to run one a
 We use Jenkins plugins to add more features to our Jenkins install (assumming is a Java app for example, you should customize):
 
 * Stack plugins: There are several plugins for Grails or other stacks.
-* Github: http://updates.jenkins-ci.org/download/plugins/subversion/1.40/subversion.hpi
-* Paramterized Trigger: http://updates.jenkins-ci.org/download/plugins/parameterized-trigger/2.15/parameterized-trigger.hpi
+* Github :http://updates.jenkins-ci.org/latest/github.hpi
+* Parameterized Trigger: http://updates.jenkins-ci.org/download/plugins/parameterized-trigger/2.15/parameterized-trigger.hpi
 * Copy Artifact: http://updates.jenkins-ci.org/download/plugins/copyartifact/1.21/copyartifact.hpi
 * Build Pipeline: http://updates.jenkins-ci.org/download/plugins/build-pipeline-plugin/1.2.3/build-pipeline-plugin.hpi
 * S3: http://updates.jenkins-ci.org/download/plugins/s3/0.2.0/s3.hpi
+* EC2 for slaves: http://updates.jenkins-ci.org/latest/ec2.hpi
 
 ### Examples setup variables
 
@@ -184,6 +185,10 @@ This includes components as java version, services running (nginx, apache, mysql
 2 Senior and 2 Junior Devops + Manager.
 
 SCRUM management: Half of team dedicated to Devops projects + half of the team SRE.
+
+1 Senior + 1 Junior for deployment
+1 Senior + 1 Junior for SRE
+Manager for Scrum Master, Product Backlog, Daily Meetings and schedule weekly Springs. Reporting with metrics.
 
 ## Timing
 

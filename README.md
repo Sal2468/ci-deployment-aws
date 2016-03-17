@@ -63,7 +63,7 @@ Cucumber is used for testing at almost every step of the way. We use Cucumber to
 **Liquibase:** Automated database change management
 Liquibase is used for all database changesets. When a change is necessary within the database, it is made to a liquibase changelog.xml
 
-***AWS CloudFormation:** Templating language for orchestrating AWS resources
+**AWS CloudFormation:** Templating language for orchestrating AWS resources
 CloudFormation is used for creating a Jenkins environment and Target environment. For instance for the Jenkins environment it creates the EC2 instance with CloudWatch monitoring alarms, associated IAM user, SNS notification topic, everything required for Jenkins to build. This along with Jenkins are the major pieces of the infrastructure.
 
 **AWS SimpleDB:** Cloud-based NoSQL database

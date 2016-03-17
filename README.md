@@ -183,7 +183,7 @@ With Capistrano’s automation in conjunction with Cucumber’s acceptance testi
 
 We can use other configuration management tools instead Ansible like Puppet or Chef. 
 
-we use Puppet for provisioning our target environments. I am going to go through our manifests and modules while explaining their use and purpose. In our Manatee infrastructure, we create a new target environment as part of the CD pipeline – discussed in part 2 of the series, CD Pipeline. Below I provide a high-level summary of the environment provisioning process:
+We use Ansible for provisioning our target environments. We create a new target environment as part of the CD pipeline.
 
 1. CloudFormation dynamically creates a params in Ansible with AWS variables
 2. CloudFormation runs playbooks as part of UserData

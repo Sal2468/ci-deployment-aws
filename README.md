@@ -204,6 +204,7 @@ http://calculator.s3.amazonaws.com/index.html
 
 Estimation:
 
-Stack | SO | Price 
+Stack | SO | Price
+--- | --- | ---
 Jenkins  Stack | Linux on m4.2xlarge On-Demand | $ 350.63 
 Target Stack | Linux on m4.2xlarge On-Demand | $ 350.63 

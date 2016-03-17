@@ -194,3 +194,11 @@ SCRUM management: Half of team dedicated to Devops projects + half of the team S
 We can use the AWS calculator to estimate the budget for the Jenkins and Platform stack. This environment will use auto scale to grow automatically if the number of deployments in development and production grow.
 
 At least we will need the resources for the initial stack. We will need to calculate depending the resources, we can start using the t2 to t4. 
+
+http://calculator.s3.amazonaws.com/index.html
+
+Estimation:
+
+ % Utilized/MonthHours/DayHours/WeekHours/Month 
+Jenkins Stack  Linux on m4.2xlarge On-Demand $ 350.63 
+Target Stack Linux on m4.2xlarge On-Demand $ 350.63 

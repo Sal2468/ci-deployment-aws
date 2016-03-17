@@ -26,16 +26,6 @@ The Target Stack
 * Creates an EC2 instance with environment (Rails, Java or other + databases).
 * Runs the Custom Application.
 
-## Team
-
-2 Senior and 2 Junior Devops + Manager.
-
-SCRUM management: Half of team dedicated to Devops projects + half of the team SRE.
-
-## Timing
-
-1 month: Normal deployment with normal staging.
-
 ## Solution
 
 A single delivery pipeline that gives our customer (developers, testers, etc.) unencumbered access to resources and a single click automated deployment to production. To enable this, the pipeline needed to include:
@@ -136,12 +126,7 @@ Basically we will have these steps:
  - Create Target: Create a new environment using a Cloud Formation template to create the AWS resources and provision with Ansible.
  - Deploy using Capistrano the new war and update configuration changes and restarts all services. Assuming the tests pass, an AWS SNS email gets dispatched to the developer with information on how to access their new development application. We version the Jenkins configuration to rollbacks.	A script is executed each hour that checks for new jobs or updated configuration and commits them up to version control.
 
- The CD pipeline enables any change in the app, infrastructure, database or configuration to make a pass to production using automation.
-
-## Budget
-
-We can use the AWS calculator to estimate the budget for the Jenkins and Platform stack. This environment will use auto scale to grow automatically if the number of deployments in development and production grows.
-At least we will need the resources for the initial stack. We will need to calculate depending the resources, we can start using the t2 to t4. 
+The CD pipeline enables any change in the app, infrastructure, database or configuration to make a pass to production using automation.
 
 ## Cloudformation
 
@@ -191,3 +176,19 @@ We use Ansible for provisioning our target environments. We create a new target 
 4. Cucumber acceptance tests are run to verify the infrastructure was provisioned correctly.
 
 This includes java version, services running (nginx, apache, mysql, etc), libraries, depedencies, compilers, etc.
+
+## Team
+
+2 Senior and 2 Junior Devops + Manager.
+
+SCRUM management: Half of team dedicated to Devops projects + half of the team SRE.
+
+## Timing
+
+1 month: Normal deployment with normal staging.
+
+## Budget
+
+We can use the AWS calculator to estimate the budget for the Jenkins and Platform stack. This environment will use auto scale to grow automatically if the number of deployments in development and production grow.
+
+At least we will need the resources for the initial stack. We will need to calculate depending the resources, we can start using the t2 to t4. 

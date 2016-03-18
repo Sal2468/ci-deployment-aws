@@ -214,9 +214,9 @@ Target Stack | Linux on m4.2xlarge On-Demand | $ 350.63
 As fast we certify the new releases more savings for the company. For example:
 
 Certification | Time | Engineers | Cost hour | Total cost
---- | --- | ---
-Without CI Certify a Release | 5 days | 10 engineers | 40$ | 20000$
-With CI | 30 min | 10 engineers | 40$ | 250$
+--- | --- | --- | --- | ---
+Without CI Certify a Release | 5 days | 10 engineers | 40$ | 20000$
+With CI | 30 min | 10 engineers | 40$ | 250$
 
 
 

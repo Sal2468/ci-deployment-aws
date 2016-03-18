@@ -175,7 +175,7 @@ We use Ansible for provisioning our target environments. We create a new target 
 
 1. CloudFormation dynamically creates a params in Ansible with AWS variables
 2. CloudFormation runs playbooks as part of UserData
-3. Ansible runs the playbooks defined in hosts/default.pp.
+3. Ansible runs the tasks in the playbooks defined for every host.
 4. Cucumber acceptance tests are run to verify the infrastructure was provisioned correctly.
 
 This includes components as java version, services running (nginx, apache, mysql, etc), libraries, depedencies, compilers, etc.
@@ -217,7 +217,3 @@ Certification | Time | Engineers | Cost hour | Total cost
 --- | --- | --- | --- | ---
 Without CI Certify a Release | 5 days | 10 engineers | 40$ | 20000$
 With CI | 30 min | 10 engineers | 40$ | 250$
-
-
-
-
